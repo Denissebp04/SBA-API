@@ -13,6 +13,23 @@
     animation: color 12s ease-in-out infinite;
     place-content: center;
   }
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  #gif1{
+    width: 250px;
+    height: 300px;
+    margin-left: 100px;
+  }
+  #gif2{
+    width: 250px;
+    height: 300px;
+    margin-left: 100px;
+    -webkit-transform: scaleX(-1);
+    transform: scalexscaleX(-1);
+  }
   @keyframes color{
     0%{
         background-position: 0% 50%;
@@ -25,12 +42,13 @@
     }
   }
 
-  .wrapper {
-    width: 500px;
-    margin-left: 450px;
+  #title {
+    text-align: center;
+    margin-bottom: 100px;
+    color: #ffffff;
   }
 
-  .container {
+  .joke-container {
     width: 500px;
     background-color: transparent;
     padding: 50px 40px;
@@ -38,20 +56,20 @@
     position: relative;
     border-radius: 8px;
     text-align: center;
-    margin-left: 450px;
+    margin-left: 180px;
     border: #ffffff;
   }
   
-  .container p {
+  .joke-container p {
     color: #fdd8d8;
     font-size: 18px;
   }
-  .container h3 {
+  .joke-container h3 {
     color: #ffffff;
     margin: 20px 0 60px 0;
     text-transform: capitalize;
   }
-  .container button {
+  .joke-container button {
     background-color: #5ceabf;
     border: none;
     padding: 15px 45px;

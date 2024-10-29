@@ -1,18 +1,19 @@
-let quote = document.getElementById("quote");
-let author = document.getElementById("author");
-let btn = document.getElementById("quote-btn");
+let joke = document.getElementById("joke");
+let punchline = document.getElementById("punchline");
+let btn = document.getElementById("btn");
 
-const Base_URL = "https://api.quotable.io";
+const Base_URL = "https://official-joke-api.appspot.com/jokes/random";
 
-const getQuote = () => {
+
+let getJoke = () => {
     fetch(Base_URL)
-        .then((res) => res.json())
-        .then((data) => {
-            quote.innerText = data.content;
-            author.innerText = data.author;
-        });
-};
+    .then(data => data.json())
+    .then((item) => {
+        joke.innerText = item.setup;
+        punchline.innerText = item.punchline
+    })
+}
 
-window.addEventListener("load", getQuote);
-btn.addEventListener("click", getQuote);
+window.addEventListener("load", getJoke);
+btn.addEventListener("click", getJoke);
 
